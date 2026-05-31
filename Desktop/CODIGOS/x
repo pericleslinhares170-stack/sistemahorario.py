@@ -1,0 +1,14 @@
+alunos = int(input('Quantidade de alunos: '))
+notas = int(input('Quantidade de notas: '))
+nota = []
+nomes_alunos = []
+for i in range (alunos):
+    nota.append([])
+    nomes_alunos.append([])
+    nome = input('Digite o nome do aluno(a): ')
+    nomes_alunos[i].append(nome)
+    for n in range (notas):
+        pont = float(input(f'Digite a {n+1}° nota: '))
+        nota[n].append(pont)
+print(nomes_alunos)
+print(notas)

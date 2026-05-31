@@ -1,0 +1,19 @@
+lista_temperatura = []
+vezes_acima = 0
+media_temperatura = 0
+lista_acima = []
+
+for i in range (8):
+    temperatura = float(input(f'Informe a temperatura do paciente pela {i+1}° vez: '))
+    lista_temperatura.append(temperatura)
+    media_temperatura += (temperatura) / 8
+
+print('A média de temperatura do paciente foi de {:.2f} graus'.format(media_temperatura))
+print()
+for temperatura in lista_temperatura:
+    if temperatura > media_temperatura:
+        vezes_acima += 1
+        lista_acima.append(temperatura)
+print(f'O paciente ficou {vezes_acima} vezes acima da média')
+print()
+print(f'Essas foram as temperaturas acima da média: {lista_acima}')

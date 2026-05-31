@@ -1,0 +1,6 @@
+num1 = int(input('Qual o número inicial da contagem? '))
+num2 = int(input('Qual o número final da contagem? '))
+
+for num2 in range (num1):
+    if num2 // 7 != 0:
+        print(num2)

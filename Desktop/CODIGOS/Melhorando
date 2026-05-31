@@ -1,0 +1,31 @@
+idades_alunos = []
+idades_moda = []
+qntd_idades = int(input('Digite a quantidade de alunos: '))
+for i in range(qntd_idades):
+    idade = int(input('Digite a idade do aluno: '))
+    idades_alunos.append(idade)
+media = sum(idades_alunos) / len(idades_alunos)
+print(f'Essa é a média das idades: {media}')
+
+idades_alunos.sort()
+idade_maxima = idades_alunos[-1]
+idade_minima = idades_alunos[0]
+amplitude = idade_maxima - idade_minima
+print(f'Essa é a amplitude das idades: {amplitude}')
+
+tam = len(idades_alunos)
+meio = tam // 2
+if tam % 2 == 0:
+    mediana = (idades_alunos[meio-1] + idades_alunos[meio]) / 2
+    print(f'Essa é a mediana das idades: {mediana}')
+else:
+    mediana = idades_alunos[meio]
+    print(f'Essa é a mediana das idades: {mediana}')
+
+
+
+idade_moda = []
+for idade in idades_alunos:
+    if idades_alunos.count(idade) > 1 and idade not in idade_moda:
+        idade_moda.append(idade)
+print(f'Essa é a moda: {idade_moda}')
